@@ -2,89 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio - Long</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
       font-family: Arial, sans-serif;
     }
 
     body {
-      background: #f2f2f2;
+      background: #f0f2f5;
       color: #333;
     }
 
     header {
-      background: #0077cc;
-      color: white;
+      background: #222;
+      color: #fff;
       padding: 20px;
-      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background: #005fa3;
+      gap: 30px;
     }
 
     nav a {
-      color: white;
-      padding: 14px 20px;
+      color: #fff;
       text-decoration: none;
-      display: block;
+      font-weight: bold;
     }
 
     nav a:hover {
-      background: #004c84;
+      color: #00bcd4;
     }
 
-    .container {
-      max-width: 1000px;
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
-      padding: 20px;
     }
 
-    .intro {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      flex-wrap: wrap;
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    .intro img {
-      width: 200px;
+    .about p {
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
       border-radius: 10px;
     }
 
-    .intro-text {
-      flex: 1;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #00bcd4;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0097a7;
     }
 
     footer {
-      text-align: center;
-      background: #0077cc;
+      background: #222;
       color: white;
+      text-align: center;
       padding: 15px;
-      margin-top: 30px;
     }
 
-    /* Mobile View */
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
-      }
-
-      .intro {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro img {
-        width: 100%;
-        max-width: 300px;
+        gap: 10px;
       }
     }
   </style>
@@ -92,30 +116,47 @@
 <body>
 
   <header>
-    <h1>Welcome to Long's Page</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <section id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p style="text-align:center">Hi! I'm Long, a front-end developer passionate about clean, responsive web design.</p>
+  </section>
 
-  <div class="container">
-    <section class="intro">
-      <img src="https://i.imgur.com/6VBx3io.png" alt="Profile Picture" />
-      <div class="intro-text">
-        <h2>Hello!</h2>
-        <p>I'm Long, a web enthusiast and developer. This landing page was hand-coded and features responsive design for both desktop and mobile views.</p>
-      </div>
-    </section>
-  </div>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a developer who loves turning ideas into interactive web experiences. This site is hand-coded using HTML and CSS, and demonstrates responsiveness and interactivity.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200" alt="Project 1">
+      <img src="https://via.placeholder.com/300x200" alt="Project 2">
+      <img src="https://via.placeholder.com/300x200" alt="Project 3">
+      <img src="https://via.placeholder.com/300x200" alt="Project 4">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
   <footer>
-    © 2025 Long – Personal Site
+    &copy; 2025 Long - All Rights Reserved
   </footer>
 
 </body>
 </html>
-
-
